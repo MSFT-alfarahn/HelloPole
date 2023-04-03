@@ -24,7 +24,7 @@ public partial class LoginViewModel : BaseViewModel
         await Task.Delay(2000); // Make auth call, we dont know how long time it takes!
         IsBusy = false;
 
-        if (Username == "admin" && Password == "admin")
+        if (Password == "admin")
         {
             await Application.Current.MainPage.DisplayAlert("Login", "Login Success", "OK");
             string token = Guid.NewGuid().ToString();   
